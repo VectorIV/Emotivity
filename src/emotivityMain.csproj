@@ -1,0 +1,523 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{35BF716E-4BE0-4773-B213-AE3C5502213E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>emotivityMain</RootNamespace>
+    <AssemblyName>EmotivityControlPanel</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>emotivity.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>ManagedMinimumRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetEmotivSDK, Version=0.8.4.0, Culture=neutral, processorArchitecture=AMD64">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\x64\DotNetEmotivSDK.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AboutBox1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutBox1.Designer.cs">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emotivityAboutScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emotivityAboutScreen.Designer.cs">
+      <DependentUpon>emotivityAboutScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emotivityBase.cs" />
+    <Compile Include="emotivityCustomiseScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emotivityCustomiseScreen.Designer.cs">
+      <DependentUpon>emotivityCustomiseScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emotivityMainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emotivityMainScreen.Designer.cs">
+      <DependentUpon>emotivityMainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="emotivitySettingScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emotivitySettingScreen.Designer.cs">
+      <DependentUpon>emotivitySettingScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutBox1.resx">
+      <DependentUpon>AboutBox1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emotivityAboutScreen.resx">
+      <DependentUpon>emotivityAboutScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emotivityCustomiseScreen.resx">
+      <DependentUpon>emotivityCustomiseScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emotivityMainScreen.resx">
+      <DependentUpon>emotivityMainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emotivitySettingScreen.resx">
+      <DependentUpon>emotivitySettingScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\bg-color.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_cloud.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_joy.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\menuButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\groupBackdrop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_love.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_wow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_sad.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_fear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_anger.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consoleButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifiFull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batteryFull.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\emotivity-logo-inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consoleButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\consoleButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\chartButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batteryHalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batteryLow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batteryNone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifiHalf.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifiLow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wifiNone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\batteryFull1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clearButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferenceButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_neutral.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_null.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\blink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lwink.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\brow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\frown.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clench.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\smile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\lsmirk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rsmirk.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\cancelButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\eyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ueyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\deyes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laugh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\graph_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newButton_click1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newButton_inv1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting_icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\txt.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\log.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\threshold.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allDefaultButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\epoc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\aboutButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferenceButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\preferenceButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\settingButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\outputButton.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_anger_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_anger_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_fear_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_fear_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_joy_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_joy_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_love_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_love_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_neutral_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_neutral_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_sad_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_sad_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_wow_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\i_wow_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\newButton_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\removeButton_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saveButton_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allDefaultButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\allDefaultButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultButton_click.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\defaultButton_inv.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\selectButton_dis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="emotivity.ico" />
+    <None Include="Resources\compose.png" />
+    <None Include="Resources\i_anger.ico" />
+    <None Include="Resources\i_wow.ico" />
+    <None Include="Resources\i_sad.ico" />
+    <None Include="Resources\i_neutral.ico" />
+    <None Include="Resources\i_love.ico" />
+    <None Include="Resources\i_joy.ico" />
+    <None Include="Resources\i_fear.ico" />
+    <None Include="Resources\i_anger.png.ico" />
+    <None Include="Resources\emotivity.ico" />
+    <None Include="Resources\quick_txt_inv.png" />
+    <None Include="Resources\quick_txt_click.png" />
+    <None Include="Resources\quick_txt.png" />
+    <None Include="Resources\quick_log_inv.png" />
+    <None Include="Resources\quick_log_click.png" />
+    <None Include="Resources\quick_log.png" />
+    <None Include="Resources\code_loop.png" />
+    <None Include="Resources\quick_set.png" />
+    <None Include="Resources\log_tab.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,14 @@
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\bin\x86\Debug\EmotivityControlPanel.exe.config
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\bin\x86\Debug\EmotivityControlPanel.exe
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\bin\x86\Debug\EmotivityControlPanel.pdb
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\bin\x86\Debug\DotNetEmotivSDK.pdb
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\emotivityMain.csprojResolveAssemblyReference.cache
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\emotivityMain.AboutBox1.resources
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\emotivityMain.emotivityAboutScreen.resources
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\emotivityMain.emotivityCustomiseScreen.resources
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\emotivityMain.emotivityMainForm.resources
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\emotivityMain.emotivitySettingScreen.resources
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\emotivityMain.Properties.Resources.resources
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\emotivityMain.csproj.GenerateResource.Cache
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\EmotivityControlPanel.exe
+E:\University\CSS400\Emotivity\emotivityMain\emotivityMain\obj\x86\Debug\EmotivityControlPanel.pdb
